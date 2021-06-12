@@ -56,6 +56,7 @@ follow_list = driver.find_elements_by_xpath('/html/body/div[5]/div/div/div[2]/ul
 position = 0
 
 # go through all the visible accounts and click on "Follow"
+# TODO: 1. The traversal of the followers array overflows the scroll rate and tries to follow not yet loaded accounts!
 while True:
     for itr in range(7):
         follow_button = follow_list[position].find_element_by_tag_name("button")
